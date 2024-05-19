@@ -2,6 +2,48 @@ body {
     font-size:15px;
 }
 
+#menu {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.product-detail-size button:focus {
+    background-color: black;
+    color: white;
+}
+
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    transition: 0.5s;
+}
+
+.zalo-me {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.scrollToTopBtn:hover {
+    transition: 0.5s;
+    opacity: 80%;
+}
+
 /* ----------------- title tiêu chuẩn ----------------------- */
 
 /* <h2 class="fw-bold text-center fs-2 my-4 pt-5" style="margin-bottom: 0;">SẢN PHẨM MỚI</h2> */
@@ -232,4 +274,33 @@ body {
     height: 50px; /* Điều chỉnh chiều cao của đường viền */
     margin: 0 10px; /* Khoảng cách giữa các phần tử */
 }
+
+.root-cart i {
+    font-size: 30px;
+}
 /* ======================================================================== */
+
+@media only screen and (max-width: 900px) and (min-width: 550px) {
+    .root-process-payment span{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .root-process-payment span{
+        font-size: 11px;
+    }
+
+    .root-cart i {
+        font-size: 20px;
+    }
+}
+
+.delete-product-in_cart a {
+    transition: 0.5s;
+}
+
+.delete-product-in_cart a:hover {
+    color: red;
+    transition: 0.5s;
+}
