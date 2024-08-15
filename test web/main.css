@@ -1,0 +1,1382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(195, 195, 195);
+    --primary-color-1: black;
+    --primary-color-2: red;
+    --primary-color-3: rgb(126, 126, 126);
+}
+
+
+body {
+    font-family:sans-serif;
+    font-size: 15px;
+}
+
+#header {
+    display: flex;
+    padding: 20px 120px;
+    justify-content: space-between;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.header-logo {
+    font-size: 20px;
+}
+
+.header-search input {
+    padding: 7px 20px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.header-search button {
+    padding: 8px 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header-group {
+    display: flex;
+}
+
+.header-cart {
+    display: flex;
+    padding: 0px 20px;
+}
+
+.header-cart i {
+    font-size: 30px;
+    padding-right: 5px;
+    transform: translateY(-5px);
+}
+
+.header-user-action {
+    position: relative;
+}
+
+.subnav-user {
+    z-index: 999 !important;
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    padding: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.subnav-user ul {
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+.subnav-user li {
+    text-align: left;
+    list-style: none;
+    padding: 5px 0px;
+}
+
+.subnav-user {
+    padding-right: 10px;
+}
+
+.subnav-user a {
+    text-decoration: none;
+    color: #000;
+}
+
+.action-user:hover .subnav-user {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ---------------------------------------------- menu ------------------------------------------------------ */
+.nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    background-color: black;
+    padding: 15px 0px;
+}
+
+.nav li {
+    list-style: none;
+    padding: 0px 10px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ------------------------------------- banner ----------------------------------------------------------------- */
+.banner {
+    position: relative;
+}
+
+.prev {
+    font-size: 50px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    cursor: pointer;
+}
+
+.next {
+    font-size: 50px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    cursor: pointer;
+}
+
+.thumbnail {
+    display: flex;
+}
+
+.description-thumbnail {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 10px;
+    margin: 0px 2px;
+    background-color: rgb(234, 234, 234);
+}
+
+.description-thumbnail {
+    text-decoration: underline;
+}
+
+.private-description {
+    margin-right: 5px;
+}
+
+/* -------------------------------------- article ------------------------------------ */
+#article {
+    padding: 20px 120px;
+}
+
+.product-img img{
+    width: 100%;
+}
+
+.new-product {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+.product {
+    width: 24%;
+    list-style: none;
+    padding: 0px 5px;
+}
+
+.product-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-info span {
+    display: block;
+}
+
+.product-img .over-lay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.product-img:hover .over-lay {
+    transform: translateX(100%);
+}
+
+.over-lay button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.over-lay button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.product-name a {
+    text-decoration: none;
+    color: gray !important;
+    transform: 0.5s !important;
+}
+
+.product-name {
+    color: gray;
+    text-align: center;
+    padding: 5px 0px;
+    font-weight: bold;
+}
+
+.product-price {
+    text-align: center;
+}
+
+.product-price-old {
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: line-through;
+    color: rgb(186, 186, 186);
+}
+
+.product-price-new {
+    text-align: center;
+}
+
+.sale {
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 10px 20px;
+}
+
+.new {
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 10px 20px;
+}
+
+.new-product-title {
+    text-align: center;
+    font-size: 30px;
+    padding: 30px 0px;
+}
+
+.see-more button{
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.see-more {
+    text-align: center;
+    margin: 20px;
+}
+
+.banner_middle img{
+    width: 100%;
+}
+
+.blog {
+    padding: 20px 120px;
+}
+
+.blog img {
+    width: 100%;
+    height: 200px;
+}
+
+.blog{
+    text-align: center;
+}
+
+.blog-title{
+    padding: 20px 0px;
+}
+
+.blog-title h2 {
+    padding: 20px 0px;
+    font-size: 30px;
+}
+
+.blog-title i {
+    font-size: 14px;
+    color: gray;
+}
+
+.carousel p {
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+/* --------------------------------- blog-------------------------------- */
+.blog-form {
+    display: flex;
+    justify-content: center;
+}
+
+.register-blog{
+    padding: 0px 120px;
+    text-align: center;
+}
+
+.register-blog-title{
+    padding: 20px 0px;
+}
+
+.register-blog-title h2 {
+    padding: 20px 0px;
+    font-size: 30px;
+}
+
+.register-blog-title i {
+    font-size: 14px;
+    color: gray;
+}
+
+.button-register-blog {
+    padding: 10px 20px;
+    color: white;
+    background-color: #000;
+    outline: none;
+    border: none;
+}
+
+.input-register-blog {
+    width: 50%;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.social-web {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+}
+
+.social-item {
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin: 10px 5px;
+}
+
+.social-item i {
+    transform: translateY(2px);
+}
+
+.insta {
+    background-color: red;
+}
+
+.facebook {
+    background-color: blue;
+}
+
+.twitter {
+    background-color: aqua;
+}
+
+/* ------------------------------------------- thank ----------------------------------- */
+.thank h2{
+    font-size: 30px;
+}
+
+.thank {
+    margin-top: 30px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 50px 0px;
+}
+
+.content {
+    position: relative;
+    margin: 10px 120px;
+}
+
+.content span {
+    font-size: 13px;
+}
+
+.content h2 {
+    padding: 20px 0px;
+}
+
+.bxs-quote-alt-left {
+    position: absolute;
+    top: 10;
+    font-size: 30px;
+    left: 0;
+}
+
+.bxs-quote-alt-right {
+    position: absolute;
+    bottom: 30;
+    font-size: 30px;
+    right: 0;
+}
+
+/* --------------------- footer ----------------------------------------- */
+#footer {
+    padding: 20px 120px;
+}
+
+.top-footer {
+    justify-content: space-between;
+    display: flex;
+}
+
+.group {
+    padding: 0px 20px;
+}
+
+.group h5{
+    padding: 10px 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.group ul li{
+    list-style: none;
+    padding: 5px 0px;
+    font-size: 15px;
+}
+
+.group ul li a {
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+}
+
+.group ul li:hover {
+    text-decoration: underline;
+}
+
+.form-footer button{
+    padding: 9px 20px;
+    background-color: black;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.form-footer input {
+    padding: 8px 0px;
+    border: 1px solid black;
+}
+
+.form-footer h5 {
+    padding: 10px 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-footer-form {
+    padding-bottom: 20px;
+}
+
+.download-link {
+    display: flex;
+}
+
+.qr-code img {
+    width: 100px;
+}
+
+.download-link-android img{
+    width: 150px;
+    display: block;
+}
+
+.gate-payment {
+    display: flex;
+}
+
+.gate-payment img {
+    margin: 10px 20px;
+    width: auto;
+    height: 50px;
+}
+
+.connect-us {
+    font-size: 30px;
+}
+
+.connect-us {
+    padding: 10px 0px;
+}
+
+.connect-us span{
+    font-size: 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.end-footer {
+    text-align: center;
+}
+
+.developer {
+    padding: 20px 0px;
+}
+
+.end-footer p{
+    margin: 10px 0px 0px 0px;
+    padding: 10px 20px;
+    background-color: black;
+    width: 100%;
+    color: white;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  PRODUCT PAGE  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.article-product-page {
+    display: flex;
+    width: 100%;
+}
+
+.article-product-page h5{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.section-category {
+    width: 20%;
+}
+
+.section-product {
+    width: 75%;
+}
+
+.product-page-category-list a{
+    text-decoration: none;
+}
+
+.product-page-category-list li {
+    list-style: none;
+    padding: 10px 0px;
+    transition: 0.5s;
+}
+
+.product-page-category-list li a {
+    color: black;
+}
+
+.product-page-category-list li:hover {
+    transform: translateX(20px);
+    color: gray;
+}
+
+.all-product {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.all-product > .product {
+    padding: 10px 0px;
+}
+
+.product-page-product-private {
+    width: 30%;
+    margin: 0px 10px;
+}
+
+.form-filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-filter input {
+    padding: 10px 20px;
+    width: 49.3%;
+    border: 1px solid var(--primary-color);
+}
+
+.form-filter select {
+    padding: 10px 20px;
+    width: 49.3%;
+    border: 1px solid var(--primary-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+  }
+  
+  .pagination a.active {
+    background-color: var(--primary-color-1);
+    color: white;
+    border: 1px solid var(--primary-color-1);
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+  
+  .pagination a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .pagination a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .primary-button-filter {
+    padding: 10px 20px;
+    border: none;
+    margin: 10px 0px;
+    outline: none;
+    background-color: black;
+    color: white;
+    width: 100%;
+  }
+
+
+  /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  PRODUCT PAGE SALE  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.form-filter-sale input[name="search"] {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+}
+
+.form-filter-sale input {
+    padding: 10px 20px;
+    width: 49.3%;
+    border: 1px solid var(--primary-color);
+}
+
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Login  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.auth {
+    padding: 0px 120px;
+    display: flex;
+}
+
+.auth-banner {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.auth-form {
+    width: 40%;
+}
+
+.auth-banner img {
+    width: 60%;
+}
+
+.auth-form h1{
+    text-align: center;
+    padding: 50px 0px;
+    font-size: 40px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    margin: 5px 0px 15px 0px;
+}
+
+.form-group label {
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+.group-input-pass {
+    display: flex;
+}
+
+.group-input-pass input {
+    width: 80%;
+}
+
+.group-input-pass button {
+    width: 20%;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 5px 0px 15px 0px;
+}
+
+.end-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.end-form a {
+    color: rgb(68, 68, 255);
+    text-decoration: none;
+}
+
+.btn-process-auth {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 20px 0px;
+}
+
+.auth-more {
+    display: flex;
+    justify-content: center;
+}
+
+.group-auth-social button {
+    padding: 10px 20px;
+    outline: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.group-auth-social {
+    display: flex;
+    margin-top: 20px;
+}
+
+.group-auth-social i {
+    font-size: 20px;
+}
+
+.auth-github {
+    background-color: var(--primary-color-1);
+    border: none;
+}
+
+.auth-github i {
+    color: white;
+}
+
+.auth-mongoDB {
+    border: 1px solid green;
+    background-color: white;
+}
+
+.auth-mongoDB i {
+    color: green;
+}
+
+.dont-have-account {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.dont-have-account a{    
+    color: rgb(68, 68, 255);
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Register @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+.user-gender {
+    display: flex;
+}
+
+.user-gender input {
+    transform: translateY(2px);
+}
+
+.gender-user-option {
+    padding: 0px 10px;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Contact @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.contact {
+    padding: 0px 120px;
+    display: flex;
+}
+
+.contact-form {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.if-map {
+    width: 50%;
+}
+
+.contact-form h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.form-group-contact input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    margin: 5px 0px 15px 0px;
+}
+
+.form-group-contact textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    margin: 5px 0px 15px 0px;
+}
+
+.btn-contact {
+    padding: 10px 20px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--primary-color-1);
+    border: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.btn-contact:hover {
+    opacity: 80%;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  about @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.about {
+    padding: 0px 120px;
+    display: flex;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-content {
+    width: 50%;
+    padding: 0px 20px;
+}
+
+.about-content h2 {
+    font-size: 40px;
+}
+
+.about-content span {
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 0px;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.more-product-title {
+    font-size: 15px;
+    margin: 20px 0px 10px 0px;
+    padding: 10px 0px 10px 10px;
+    background-color: black;
+    color: white;
+}
+
+.partner-title {
+    font-size: 15px;
+    margin: 20px 0px 10px 0px;
+    padding: 10px 0px 10px 10px;
+    background-color: black;
+    color: white;
+}
+
+.more-product {
+    padding: 0px 120px;
+}
+
+.partner {
+    padding: 60px 120px;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  cart @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.cart-index {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-index-item {
+    position: relative;
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 0px 20px;
+    font-weight: bold;
+}
+
+.cart-index-item i {
+    font-size: 25px;
+    transform: translateY(3px);
+}
+
+.cart-index-item-private {
+    padding: 0px 30px;
+}
+
+.cart-index-item-private:before {
+    content: "";
+    position: absolute;
+    background-color: rgb(151, 151, 151);
+    width: 2px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    transform: translateY(-8px);
+    transform: translateX(10px);
+}
+
+.is_active_in_cart {
+    color: var(--primary-color-1);
+}
+
+.cart {
+    padding: 30px 120px;
+}
+
+.cart-list {
+    padding-top: 90px;
+}
+
+.cart-list li {
+    list-style: none;
+}
+
+.cart-item {
+    display: flex;
+    padding: 5px 0px;
+    justify-content: space-between;
+}
+
+.cart-item-image {
+    width: 20%;
+}
+
+.cart-item-image img{
+    width: 120px;
+}
+
+.cart-item-info {
+    justify-content: space-between;
+    width: 80%;
+    display: flex;
+}
+
+.cart-item-name p {
+    padding: 5px 0px;
+}
+
+.cart-item-name a {
+    color: rgb(65, 65, 255);
+    text-decoration: none;
+}
+
+.cart-item-price {
+    display: flex;
+}
+
+.cart-item-current-price {
+    padding: 0px 10px;
+    color: var(--primary-color);
+    text-decoration: line-through;
+}
+
+.cart-item-is-sale {
+    padding: 0px 10px;
+}
+
+.cart-item-update-quantity-form {
+    display: flex;
+}
+
+.cart-item-update-quantity-form span {
+    padding: 0px 5px;
+    transform: translateY(10px);
+}
+
+.cart-item-update-quantity-form button {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.del-cart-item button{
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color-2);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.use-coupon-title {
+    font-size: 15px;
+    margin: 20px 0px 10px 0px;
+    padding: 10px 0px 10px 10px;
+    background-color: black;
+    color: white;
+}
+
+.form-use-coupon {
+    display: flex;
+    padding-top: 20px;
+}
+
+.form-use-coupon input{
+    width: 90%;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+}
+
+.form-use-coupon button {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 10%;
+    cursor: pointer;
+}
+
+.sumary-in-cart {
+    padding-top: 30px;
+}
+
+.sumary-item {
+    padding: 2px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sumary-item span {
+    font-size: 15px;
+    color: rgb(124, 124, 124);
+}
+
+.btn-checkout {
+    padding: 10px 20px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-checkout:hover {
+    opacity: 70%;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  checkout @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.checkout {
+    padding: 0px 120px;
+}
+
+.form-check-out {
+    padding: 60px 0px;
+}
+
+.group-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.group-1 > .form-group-checkout {
+    width: 49.5%;
+}
+
+.group-3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.group-3 > .form-group-checkout {
+    width: 33%;
+}
+
+.form-group-checkout input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    margin: 5px 0px 15px 0px;
+}
+
+.form-header {
+    display: flex;
+    padding: 10px 0px;
+    justify-content: space-between;
+}
+
+.form-header a {
+    text-decoration: none;
+}
+
+.form-header button {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.form-header button:hover {
+    opacity: 80%;
+}
+
+.group-4 textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    margin: 5px 0px 15px 0px;
+}
+
+.btn-success-checkout {
+    margin-top: 30px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.btn-success-checkout:hover {
+    opacity: 80%;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  product detail @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.product-detail {
+    display: flex;
+    padding: 0px 120px;
+}
+
+.galery-image-product {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.galery-image-product img {
+    width: 83%;
+}
+
+.product-slide {
+    width: 50%;
+}
+
+.product-slide img {
+    width: 100%;
+}
+
+.product-detail-item {
+    width: 30%;
+}
+
+.product-detail-name h2{
+    font-size: 25px;
+    padding: 20px 0px;
+}
+
+.product-detail-item {
+    padding: 0px 20px;
+}
+
+.product-detail-brand span {
+    padding: 5px 0px;
+    color: var(--primary-color-3);
+}
+
+.product-detail-code span {
+    padding: 5px 0px;
+    color: var(--primary-color-3);
+}
+
+.product-detail-is-sale {
+    margin: 20px 0px;
+}
+
+.product-detail-is-sale span {
+    padding: 10px 20px;
+    color: white;
+    background-color: red;
+}
+
+.product-detail-old-value span{
+    color: var(--primary-color-3);
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.product-detail-old-value {
+    padding: 10px 0px;
+}
+
+.product-detail-new-value {
+    padding-bottom: 10px;
+}
+
+.product-detail-stock {
+    padding: 10px 0px;
+}
+
+.product-detail-how-to-choose-size {
+    padding: 10px 0px;
+}
+
+.product-detail-how-to-choose-size span {
+    text-decoration:underline;
+    color: rgb(100, 100, 255);
+}
+
+.product-detail-size {
+    padding: 10px 0px;
+}
+
+.product-detail-size button {
+    padding: 10px 10px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    background-color: white;
+}
+
+.product-detail-size button:focus {
+    background-color: #000;
+    color: white;
+}
+
+.product-detail-update-quantity {
+    padding: 10px 0px;
+    display: flex;
+}
+
+.update-quantity-form-detail button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+
+.update-quantity-form-detail input {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+}
+
+.product-detail-update-quantity p{
+    padding-right: 10px ;
+    transform: translatey(8px);
+}
+
+.product-detail-button-add-to-cart button {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.product-detail-button-buy-now button {
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.product-detail-description span{
+    display: inline-block;
+    padding: 5px 0px;
+}

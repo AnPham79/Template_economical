@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-ap="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giới thiệu</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="./assets/fontawesome-free-6.5.2-web/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    </head>
+
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        .btn-google:hover {
+            background-color: red;
+            color: white !important;
+        }
+
+        .or {
+            font-weight: bold;
+        }
+    </style>
+
+    <body ng-controller="MyController">
+        <!-- --------------------------------------- header -------------------------------------------------------- -->
+        <main>
+            <div class="container" style="padding-top: 60px; max-width: 1000px;">
+                <div class="row">
+                    <div class="col-md-6 d-none d-md-block">
+                        <img src="./public/img/linhtinh/banner_login.png" class="w-100" alt="">
+                    </div>
+            
+                    <div class="col-md-6">
+                        <form action="" method="POST">
+                            <h1 class="bold text-center mb-5">Đăng nhập</h1>
+                            <div class="form-group mt-3">
+                                <label for="email" class="label-control">Địa chỉ email</label>
+                                <input type="email" name="email" 
+                                class="form-control border border-secondary-subtle mt-1 rounded-0" 
+                                placeholder="Nhập địa chỉ email của bạn">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="password" class="label-control">Mật khẩu</label>
+                                <div class="input-group">
+                                    <input type="password" id="password" name="password" 
+                                    class="form-control border border-secondary-subtle rounded-0" 
+                                    placeholder="Nhập mật khẩu của bạn">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark rounded-0" type="button" onclick="togglePassword()">Hiện</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check mt-3">
+                                <input class="form-check-input border-secondary-subtle mt-1" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                  Nhắc nhỡ tôi
+                                </label>
+                              </div>
+                            <div class="form-group mt-4">
+                                <button class="rounded-0 btn btn-dark w-100" type="submit">Đăng nhập ngay</button>
+                            </div>
+                            
+                        </form>
+                        <div class="or">
+                            <p class="text-center my-3">Hoặc</p>
+                        </div>
+                        <div class="button-social">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#">
+                                        <button class="btn btn-dark rounded-0 w-100">
+                                            <i class="fa-brands fa-github"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#">
+                                        <button class="btn-google btn btn-light border-danger rounded-0 w-100 text-danger">
+                                            <i class="fa-brands fa-google"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exist_accout mt-4 text-center">
+                            <p>Bạn chưa có tài khoản ? <a href="">đăng kí ngay</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </main>
+        <!-- ------------------------------------- end header ---------------------------------------------------------- -->
+
+            <script src="./assets/js/bootstrap.bundle.min.js"></script>
+            <!-- <script src="./assets/js/angular-1.8.2/angular.min.js"></script>
+        <script src="./assets/js/angular-route.min.js"></script> -->
+            <script src="./assets/js/app.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+            <script>
+                function togglePassword() {
+                    var password = document.getElementById('password');
+                    var toggleButton = document.getElementById('toggleButton');
+        
+                    if (password.type === "password") {
+                        password.type = "text";
+                        toggleButton.textContent = "Ẩn";
+                    } else {
+                        password.type = "password";
+                        toggleButton.textContent = "Hiện";
+                    }
+                }
+            </script>
+        </body>
+    </html>

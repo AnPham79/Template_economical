@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <header>
+        <section>
+            <div id="header">
+                <div class="header-logo">
+                    <h2>BAOAN STORE</h2>
+                </div>
+                <div class="header-search">
+                    <input name="search" type="text" placeholder="Nhập tìm kiếm của bạn">
+                    <button>Tìm kiếm</button>
+                </div>
+                <div class="header-group">
+                    <div class="header-cart">
+                        <i class='bx bxs-cart'></i>
+                        <span>giỏ hàng</span>
+                    </div>
+                    <div class="header-user-action">
+                        <div class="action-user">
+                            <span style="cursor: pointer;">Hi: Phạm An</span>
+                        <div class="subnav subnav-user">
+                            <ul>
+                                <li><i class='bx bx-chevron-right' style="transform: translateY(1px);"></i><a href="#">Đơn hàng</a></li>
+                                <li><i class='bx bx-chevron-right' style="transform: translateY(1px);"></i><a href="#">Lịch sử mua hàng</a></li>
+                                <li><i class='bx bx-chevron-right' style="transform: translateY(1px);"></i><a href="#">Cài đặt tài khoản</a></li>
+                                <li><i class='bx bx-chevron-right' style="transform: translateY(1px);"></i><a href="#">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./product.html">Sản phẩm</a></li>
+                    <li><a href="./product_sale.html">Sản phẩm giảm giá</a></li>
+                    <li><a href="./cart.html">giỏ hàng</a></li>
+                    <li><a href="./about.html">Giới thiệu</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <article>
+        <div class="breadcrumb" style="display: flex; padding: 30px 120px;">
+            <a href="./index.html">Trang chủ</a> <span style="padding: 0px 15px;">/</span> <span>Giỏ hàng</span>
+        </div>
+
+        <div class="cart">
+            <div class="cart-index">
+                <div class="cart-index-item cart-index-item-private in-cart is_active_in_cart">
+                    <i class='bx bxs-shopping-bag' ></i>
+                    <span>GIỎ HÀNG</span>
+                </div>
+                <div class="cart-index-item cart-index-item-private in-check-out">
+                    <i class='bx bxs-box' ></i>
+                    <span>ĐẶT HÀNG</span>
+                </div>
+                <div class="cart-index-item in-success-checkout">
+                    <i class='bx bxs-package' ></i>
+                    <span>HOÀN TẤT ĐẶT HÀNG</span>
+                </div>
+            </div>
+
+            <ul class="cart-list">
+                <li class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="./image/product-13.jpg" alt="">
+                    </div>
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">
+                            <p><b>Tên sản phẩm: </b><a href="">Váy dạ hội Osinki 1997</a></p>
+                            <p><b>Thương hiệu: </b>BAOAN STORE</p>
+                            <p><b>Size:</b> 40</p>
+                        </div>
+                        <div class="cart-item-price">
+                            <div class="cart-item-current-price">
+                                <span>Giá góc: 771,862 VND </span>
+                            </div>
+                            <div class="cart-item-is-sale">
+                                <span>Giá giảm: 241,862 VND </span>
+                            </div>
+                        </div>
+                        <div class="cart-item-update-quantity">
+                            <form action="" class="cart-item-update-quantity-form">
+                                <div class="minus">
+                                    <button><i class='bx bx-minus'></i></button>
+                                </div>
+                                <span>2</span>
+                                <div class="plus">
+                                    <button><i class='bx bx-plus'></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="cart-item-sub-total-price">
+                            <span>483.724 VND</span>
+                        </div>
+                        <div class="del-cart-item">
+                            <form action="">
+                                <button><i class='bx bxs-trash-alt'></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="./image/product-29.jpg" alt="">
+                    </div>
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">
+                            <p><b>Tên sản phẩm: </b><a href="">Váy dạ hội Osinki 1997</a></p>
+                            <p><b>Thương hiệu: </b>BAOAN STORE</p>
+                            <p><b>Size:</b> 40</p>
+                        </div>
+                        <div class="cart-item-price">
+                            <div class="cart-item-current-price">
+                                <span>Giá góc: 771,862 VND </span>
+                            </div>
+                            <div class="cart-item-is-sale">
+                                <span>Giá giảm: 241,862 VND </span>
+                            </div>
+                        </div>
+                        <div class="cart-item-update-quantity">
+                            <form action="" class="cart-item-update-quantity-form">
+                                <div class="minus">
+                                    <button><i class='bx bx-minus'></i></button>
+                                </div>
+                                <span>2</span>
+                                <div class="plus">
+                                    <button><i class='bx bx-plus'></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="cart-item-sub-total-price">
+                            <span>483.724 VND</span>
+                        </div>
+                        <div class="del-cart-item">
+                            <form action="">
+                                <button><i class='bx bxs-trash-alt'></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="./image/product-30.jpg" alt="">
+                    </div>
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">
+                            <p><b>Tên sản phẩm: </b><a href="">Váy dạ hội Osinki 1997</a></p>
+                            <p><b>Thương hiệu: </b>BAOAN STORE</p>
+                            <p><b>Size:</b> 40</p>
+                        </div>
+                        <div class="cart-item-price">
+                            <div class="cart-item-current-price">
+                                <span>Giá góc: 771,862 VND </span>
+                            </div>
+                            <div class="cart-item-is-sale">
+                                <span>Giá giảm: 241,862 VND </span>
+                            </div>
+                        </div>
+                        <div class="cart-item-update-quantity">
+                            <form action="" class="cart-item-update-quantity-form">
+                                <div class="minus">
+                                    <button><i class='bx bx-minus'></i></button>
+                                </div>
+                                <span>2</span>
+                                <div class="plus">
+                                    <button><i class='bx bx-plus'></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="cart-item-sub-total-price">
+                            <span>483.724 VND</span>
+                        </div>
+                        <div class="del-cart-item">
+                            <form action="">
+                                <button><i class='bx bxs-trash-alt'></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <h2 class="use-coupon-title">DÙNG MÃ GIẢM GIÁ</h2>
+            <form action="" class="form-use-coupon">
+                <input type="text" name="coupon" class="coupon" placeholder="Nhập mã giảm giá của bạn">
+                <button type="submit">Dùng</button>
+            </form>
+
+            <div class="sumary-in-cart">
+                <div class="sumary-item provisional-total">
+                    <span>Tổng tiền tạm thời</span>
+                    <span>1,003,890 VND</span>
+                </div>
+                <div class="sumary-item code-discount">
+                    <span>Mã giảm giá</span>
+                    <span>Không có</span>
+                </div>
+                <div class="sumary-item value-discount">
+                    <span>Giá trị giảm</span>
+                    <span>Không có</span>
+                </div>
+                <div class="sumary-item shipping-cost">
+                    <span>Tiền ship</span>
+                    <span>Free ship</span>
+                </div>
+                <div class="sumary-item total-price">
+                    <span>Tổng tiền</span>
+                    <span>1,003,890 VND</span>
+                </div>
+            </div>
+
+            <button class="btn-checkout">Thanh toán ngay</button>
+
+        </div>
+
+
+        <div class="more-product">
+            <section>
+                <h2 class="more-product-title">MỘT SỐ SẢN PHẨM CỦA CHÚNG TÔI</h2>
+                <ul class="new-product">
+                    <li class="product">
+                        <div class="product-img">
+                            <img
+                                src="./image/product-1.jpg" alt>
+                            <div class="over-lay">
+                                <button>Xem thêm</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-name">Váy dạ hội APK</span>
+                            <span class="product-price">434.000 VND</span>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="product-img">
+                            <img
+                                src="./image/product-2.jpg" alt>
+                            <div class="over-lay">
+                                <button>Xem thêm</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-name">Váy dạ hội APK</span>
+                            <span class="product-price">434.000 VND</span>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="product-img">
+                            <img
+                                src="./image/product-14.jpg" alt>
+                            <div class="over-lay">
+                                <button>Xem thêm</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-name">Váy dạ hội APK</span>
+                            <span class="product-price">434.000 VND</span>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="product-img">
+                            <img
+                                src="./image/product-17.jpg" alt>
+                            <div class="over-lay">
+                                <button>Xem thêm</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-name">Váy dạ hội APK</span>
+                            <span class="product-price">434.000 VND</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="see-more">
+                    <a href=""><button >Xem tất cả</button></a>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="thank">
+            <div class="content">
+                <i class='bx bxs-quote-alt-left'></i>
+                <h2>BAO AN STORE</h2>
+                <span>
+                    Chúng tôi tự hào giới thiệu đến bạn một thế giới của phong cách và sự tự tin thông qua bộ sưu tập đa dạng và độc đáo của chúng tôi. Bạn có thể tìm thấy mọi thứ từ những bộ trang phục thời thượng cho các buổi tiệc đêm sôi động đến những bộ đồ thoải mái và phong cách cho những buổi dạo phố thoải mái. Tại BAOAN STORE, chúng tôi cam kết mang lại cho bạn những sản phẩm chất lượng nhất, từ các nhãn hiệu uy tín đến những lựa chọn thiết kế độc quyền. Chúng tôi hiểu rằng phong cách là cách thể hiện bản thân, và vì vậy, mỗi mẫu trang phục tại cửa hàng của chúng tôi đều được lựa chọn cẩn thận để phản ánh sự đa dạng và cá nhân hóa của từng khách hàng.
+                </span>
+                <i class='bx bxs-quote-alt-right'></i>
+            </div>
+        </div>
+    </article>
+        <div id="footer">
+            <section class="top-footer">
+                <div class="group">
+                    <h5>VỀ BAOAN STORE</h5>
+                    <ul>
+                        <li><a href="">Chúng tôi là ai</a></li>
+                        <li><a href="">Cam kết của chúng tôi</a></li>
+                        <li><a href="">Tin tuyển dụng</a></li>
+                        <li><a href="">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h5>HỖ TRỢ KHÁCH HÀNG</h5>
+                    <ul>
+                        <li><a href="">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="">Phương thức thanh toán</a></li>
+                        <li><a href="">Chính sách thành viên</a></li>
+                        <li><a href="">Chính sách tích - tiêu điểm</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h5>CHÍNH SÁCH</h5>
+                    <ul>
+                        <li><a href="">Chính sách vận chuyển</a></li>
+                        <li><a href="">Chính sách đổi trả</a></li>
+                        <li><a href="">Điều kiện & Điều khoản</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <h5>LIÊN HỆ</h5>
+                    <b>Hỗ trợ tư vấn mua online:</b>
+                    <ul style="padding-bottom: 20px;">
+                        <li><a href="">Chúng tôi là ai</a></li>
+                        <li><a href="">Cam kết của chúng tôi</a></li>
+                        <li><a href="">Tin tuyển dụng</a></li>
+                        <li><a href="">Hệ thống cửa hàng</a></li>
+                    </ul>
+                    <b>Hỗ trợ khiếu nại và bảo hành sản phẩm:</b>
+                    <ul>
+                        <li><a href="">Hotline: 0927553664</a></li>
+                        <li><a href="">Email: cskh@tokyolife.vn</a></li>
+                        <li><a href="">Giờ làm việc: 8:30 - 22:00 hằng ngày.</a></li>
+                    </ul>
+                </div>
+                <div class="form-footer">
+                    <h5>ĐĂNG KÝ NHẬN TIN TỪ BAOANSTORE</h5>
+                    <form action="" class="form-footer-form">
+                        <input type="text" name="email">
+                        <button>Đăng kí</button>
+                    </form>
+                    <span>Cài App nhận <b>Ưu đãi 50% Sinh Nhật</b> Tích Điểm Mọi Hóa Đơn</span>
+                    <div class="download-link">
+                        <div class="qr-code">
+                            <img src="./image//linhtinh/qrcode.jpg" alt="">
+                        </div>
+                        <div class="download-link-android">
+                            <img src="./image/linhtinh/app_store.jpg" alt="">
+                            <img src="./image/linhtinh/google_play.jpg" alt="">
+                        </div>
+                    </div>
+                    <b>Chúng tôi kết nối thanh toán qua</b>
+                    <div class="gate-payment">
+                        <img src="./image/linhtinh/vnpay.jpg" alt="">
+                        <img src="./image/linhtinh/momo.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="connect-us">
+                    <span>Kết nối với chúng tôi</span>
+                    <i class='bx bxl-facebook' style="color: blue;"></i>
+                    <i class='bx bxl-twitter' style="color: aqua;"></i>
+                    <i class='bx bxl-youtube' style="color: red;"></i>
+                    <i class='bx bxl-instagram-alt' style="color: pink;"></i>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div class="developer">
+                    <p>DEV: Phạm Ngọc Bảo An</p>
+                    <p>Address: Cam Thành Nam - Cam Ranh - Khánh Hòa.</p>
+                    <p>My major: Web developer.</p>
+                    <p>Thanks for visiting my website.</p>
+                </div>
+            </section>
+            
+        </div>
+        <section class="end-footer">
+            <p>BAOAN STORE Copyright © 2024 create by Phạm Ngọc Bảo An 14-8-2024.</p>
+        </section>
+    <footer>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./main.js">
+    </script>    
+</body>
+</html>
